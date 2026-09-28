@@ -73,7 +73,7 @@ while left < right:
 else:
     print("Palindrome")
 """
-
+"""
 #6)Find the Longest Word
 sentence = input()
 words = sentence.split()
@@ -143,4 +143,73 @@ for i in range(1, len(s)):
 
 result += s[-1] + str(count)
 
+print(result)"""
+
+#11)count word without split()
+
+s=input()
+word_count = 0
+for i in range(len(s)):
+    if s[i] != ' ' and (i == 0 or s[i - 1] == ' '):
+        word_count += 1
+
+print(word_count)
+
+#12) Remove Extra Spaces
+s=input()
+result=""
+
+for ch in s:
+    if ch !=' ':
+        result+=ch
+
 print(result)
+
+#13) Find the Most Frequent Character
+s = input()
+
+freq = {}
+
+for ch in s:
+    if ch in freq:
+        freq[ch] += 1
+    else:
+        freq[ch] = 1
+
+max_count = 0
+answer = ''
+
+for ch in s:
+    if freq[ch] > max_count:
+        max_count = freq[ch]
+        answer = ch
+
+print(answer)
+        
+#14) Reverse Words in a String
+s = input()
+words = s.split()
+
+result = []
+
+for word in words:
+    chars = list(word)
+    left = 0
+    right = len(chars) - 1
+
+    while left < right:
+        chars[left], chars[right] = chars[right], chars[left]
+        left += 1
+        right -= 1
+
+    result.append(''.join(chars))
+
+print(' '.join(result))
+
+#15) Check if a String is Numeric
+s = input()
+
+if s.isdigit():
+    print("Yes")
+else:
+    print("No")
