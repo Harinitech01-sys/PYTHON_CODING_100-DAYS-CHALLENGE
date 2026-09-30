@@ -144,7 +144,7 @@ for i in range(1, len(s)):
 result += s[-1] + str(count)
 
 print(result)"""
-
+"""
 #11)count word without split()
 
 s=input()
@@ -239,4 +239,19 @@ for i in range(len(s)):
         left -= 1
         right += 1
 
-print(longest)
+print(longest)"""
+
+#17)GROUP ANAGRAMS
+s = ["bat", "ate", "tab", "tea", "eat", "tan"]
+d = {}
+
+for i in s:
+    key = "".join(sorted(i))
+
+    if key not in d:
+        d[key] = [i]
+    else:
+        d[key].append(i)
+
+print(list(d.values()))
+        
