@@ -133,3 +133,69 @@ missing = total - sum(a)
 
 print(missing)
 """
+
+#11,12 find duplicates in an array
+n=int(input())
+arr=list(map(int,input().split()))
+result=[]
+for i in arr:
+    if i not in result:
+        result.append(i)
+    else:
+        print(i)
+        
+n = int(input())
+arr = list(map(int, input().split()))
+
+result = []
+duplicates = []
+
+for i in arr:
+    if i not in result:
+        result.append(i)
+    elif i not in duplicates:
+        duplicates.append(i)
+
+print(*duplicates)
+
+#13. Find all elements that appear only once
+n = int(input())
+arr = list(map(int, input().split()))
+
+result = []
+
+for i in arr:
+    if arr.count(i) == 1:
+        result.append(i)
+
+print(*result)
+
+#14. Find the intersection of two arrays
+n = int(input())
+arr1 = list(map(int, input().split()))
+
+m = int(input())
+arr2 = list(map(int, input().split()))
+
+result = []
+
+for i in arr1:
+    if i in arr2 and i not in result:
+        result.append(i)
+
+print(*result)
+
+#15. Find the union of two arrays
+n = int(input())
+arr1 = list(map(int, input().split()))
+
+m = int(input())
+arr2 = list(map(int, input().split()))
+
+result = []
+
+for i in arr1 + arr2:
+    if i not in result:
+        result.append(i)
+
+print(*result)
