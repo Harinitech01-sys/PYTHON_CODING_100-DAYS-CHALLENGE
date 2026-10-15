@@ -199,3 +199,48 @@ for i in arr1 + arr2:
         result.append(i)
 
 print(*result)
+
+
+# 1. Print all elements
+arr = [10, 20, 30, 40, 50]
+for i in range(len(arr)):
+    print(arr[i], end=" ")
+print()
+
+# 2. Sum of array elements
+arr = [1, 2, 3, 4, 5]
+total = 0
+for i in range(len(arr)):
+    total += arr[i]
+print("Sum:", total)
+
+# 3. Find the largest element
+arr = [12, 45, 7, 89, 23]
+largest = arr[0]
+for i in range(1, len(arr)):
+    if arr[i] > largest:
+        largest = arr[i]
+print("Largest:", largest)
+
+# 4. Reverse an array
+arr = [1, 2, 3, 4, 5]
+for i in range(len(arr) - 1, -1, -1):
+    print(arr[i], end=" ")
+print()
+
+# 5. Find the second largest distinct element
+arr = [10, 25, 8, 40, 30]
+largest = float('-inf')
+second = float('-inf')
+
+for num in arr:
+    if num > largest:
+        second = largest
+        largest = num
+    elif num > second and num != largest:
+        second = num
+
+if second == float('-inf'):
+    print("No second largest element")
+else:
+    print("Second largest:", second)
