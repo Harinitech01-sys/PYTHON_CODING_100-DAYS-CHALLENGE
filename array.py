@@ -244,3 +244,68 @@ if second == float('-inf'):
     print("No second largest element")
 else:
     print("Second largest:", second)
+
+
+
+# 6. Count Even and Odd Elements
+arr = [1, 2, 3, 4, 5, 6]
+even = 0
+odd = 0
+
+for num in arr:
+    if num % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+
+print("Even:", even)
+print("Odd:", odd)
+
+
+# 7. Search an Element in an Array
+arr = [10, 20, 30, 40, 50]
+target = 30
+found = False
+
+for i in range(len(arr)):
+    if arr[i] == target:
+        print("Found at index:", i)
+        found = True
+        break
+
+if not found:
+    print("Not found")
+
+
+# 8. Count Occurrences of an Element
+arr = [1, 2, 3, 2, 4, 2, 5]
+target = 2
+count = 0
+
+for num in arr:
+    if num == target:
+        count += 1
+
+print("Occurrences:", count)
+
+
+# 9. Copy One Array into Another
+arr = [10, 20, 30, 40, 50]
+copy_arr = []
+
+for num in arr:
+    copy_arr.append(num)
+
+print("Original:", arr)
+print("Copied:", copy_arr)
+
+
+# 10. Remove Duplicates from an Array
+arr = [1, 2, 2, 3, 4, 3, 5]
+unique = []
+
+for num in arr:
+    if num not in unique:
+        unique.append(num)
+
+print("Without duplicates:", unique)
