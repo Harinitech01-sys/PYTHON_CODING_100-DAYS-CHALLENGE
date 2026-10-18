@@ -309,3 +309,60 @@ for num in arr:
         unique.append(num)
 
 print("Without duplicates:", unique)
+
+# 1. Reverse a String
+s = input()
+print(s[::-1])
+
+# 2. Check Palindrome
+s = input()
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+
+# 3. Count Vowels
+s = input()
+count = 0
+for ch in s.lower():
+    if ch in "aeiou":
+        count += 1
+print(count)
+
+# 4. Count Characters
+s = input()
+print(len(s))
+
+# 5. Convert to Uppercase
+s = input()
+print(s.upper())
+
+# 6. Count Character Frequency
+s = input()
+ch = input()
+print(s.count(ch))
+
+# 7. Remove Spaces
+s = input()
+print(s.replace(" ", ""))
+
+# 8. Count Words
+s = input()
+print(len(s.split()))
+
+# 9. Check Anagram
+s1 = input().lower()
+s2 = input().lower()
+if sorted(s1) == sorted(s2):
+    print("Anagram")
+else:
+    print("Not Anagram")
+
+# 10. First Non-Repeating Character
+s = input()
+for ch in s:
+    if s.count(ch) == 1:
+        print(ch)
+        break
+else:
+    print("No unique character")
