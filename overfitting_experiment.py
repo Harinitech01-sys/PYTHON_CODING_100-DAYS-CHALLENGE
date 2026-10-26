@@ -134,3 +134,20 @@ print(f"Deep tree test accuracy:   {deep_test_acc:.4f}")
 
 print(f"Fixed tree train accuracy: {fixed_train_acc:.4f}")
 print(f"Fixed tree test accuracy:  {fixed_test_acc:.4f}")
+
+
+from sklearn.metrics import precision_score, recall_score, f1_score
+
+# Actual values: 1 = positive, 0 = negative
+y_true = [1, 1, 1, 1, 0, 0]
+
+# Model predictions
+y_pred = [1, 1, 1, 0, 0, 0]
+
+precision = precision_score(y_true, y_pred)
+recall = recall_score(y_true, y_pred)
+f1 = f1_score(y_true, y_pred)
+
+print("Precision:", precision)
+print("Recall:", recall)
+print("F1-score:", f1)
