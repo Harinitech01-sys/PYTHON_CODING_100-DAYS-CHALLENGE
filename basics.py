@@ -123,3 +123,36 @@ print("Average Salary:", total/len(employees))
 for employee in employees:
     if employee[2]>30000:
         print(employee[1], "earns more than ₹30,000")
+# Student Marks Analyzer
+
+# Step 1: Store student names and marks
+students = {
+    "Arun": 85,
+    "Priya": 92,
+    "Ravi": 35,
+    "Meena": 76,
+    "Kavi": 28
+}
+
+# Step 2: Calculate average
+total = sum(students.values())
+average = total / len(students)
+
+print("Average Marks:", average)
+
+# Step 3: Find highest and lowest marks
+highest = max(students, key=students.get)
+lowest = min(students, key=students.get)
+
+print("Highest:", highest, "-", students[highest])
+print("Lowest:", lowest, "-", students[lowest])
+
+# Step 4: Display Pass or Fail
+print("\nStudent Results:")
+
+for name, mark in students.items():
+
+    if mark >= 40:
+        print(name, "-", "Pass")
+    else:
+        print(name, "-", "Fail")
