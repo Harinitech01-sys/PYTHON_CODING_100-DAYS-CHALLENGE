@@ -54,3 +54,28 @@ compliments = [
 ]
 
 print(random.choice(compliments))
+
+import random
+
+number = random.randint(1, 10)
+
+guess = int(input("Guess a number (1-10): "))
+
+if guess == number:
+    print("🎉 You are a genius!")
+else:
+    print("Oops! The number was", number)
+    
+    
+mood = input("How are you feeling today? ").lower()
+
+if mood == "happy":
+    print("😊 Keep shining!")
+elif mood == "sad":
+    print("💗 Better days are coming!")
+elif mood == "angry":
+    print("🌿 Take a deep breath!")
+elif mood == "tired":
+    print("😴 Time to recharge!")
+else:
+    print("✨ You're unique. Keep going!")
