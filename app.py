@@ -127,3 +127,24 @@ for i in range(3):
         output[i, j] = np.sum(region * kernel)
 
 print(output)
+import random
+
+
+def generate_lucky_numbers(count=5, max_num=50):
+    """Generates a sorted list of unique random numbers."""
+    numbers = random.sample(range(1, max_num + 1), count)
+    return sorted(numbers)
+
+
+def main():
+    print("Welcome to the Lucky Number Generator!")
+    user_name = input("Enter your name: ").strip() or "Friend"
+
+    lucky_numbers = generate_lucky_numbers()
+    print(f"\nHello, {user_name}! Your lucky numbers today are:")
+    print(", ".join(map(str, lucky_numbers)))
+
+
+if __name__ == "__main__":
+    main()
+
