@@ -105,3 +105,25 @@ def main():
 if __name__ == "__main__":
     main()
 
+import numpy as np
+
+image = np.array([
+    [1, 2, 0, 3],
+    [4, 5, 6, 1],
+    [7, 8, 9, 2],
+    [1, 2, 3, 4]
+])
+
+kernel = np.array([
+    [1, 0],
+    [0, -1]
+])
+
+output = np.zeros((3, 3))
+
+for i in range(3):
+    for j in range(3):
+        region = image[i:i+2, j:j+2]
+        output[i, j] = np.sum(region * kernel)
+
+print(output)
