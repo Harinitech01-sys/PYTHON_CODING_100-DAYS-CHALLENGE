@@ -148,3 +148,26 @@ def main():
 if __name__ == "__main__":
     main()
 
+name = input("Enter student name: ")
+
+marks = []
+
+for i in range(5):
+    mark = float(input(f"Enter subject {i+1} mark: "))
+    marks.append(mark)
+
+total = sum(marks)
+average = total / 5
+
+print("\nStudent Name:", name)
+print("Total Marks:", total)
+print("Average:", average)
+
+if average >= 90:
+    print("Grade: A")
+elif average >= 75:
+    print("Grade: B")
+elif average >= 50:
+    print("Grade: C")
+else:
+    print("Grade: Fail")
