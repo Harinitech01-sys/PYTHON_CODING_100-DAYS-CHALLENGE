@@ -201,3 +201,31 @@ print(np.dot(A, B))
 
 print("\nTranspose:")
 print(A.T)
+
+import numpy as np
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
+
+# Training data
+X = np.array([[0], [1], [2], [3], [4]])
+y = np.array([[0], [2], [4], [6], [8]])
+
+# Create model
+model = Sequential([
+    Dense(8, activation='relu', input_shape=(1,)),
+    Dense(1)
+])
+
+# Compile model
+model.compile(
+    optimizer='adam',
+    loss='mse'
+)
+
+# Train model
+model.fit(X, y, epochs=100, verbose=0)
+
+# Prediction
+result = model.predict(np.array([[5]]), verbose=0)
+
+print("Prediction for 5:", result)
