@@ -268,3 +268,47 @@ while True:
 
     else:
         print("Invalid choice!")
+        
+        
+    books = []
+
+def add_book():
+    name = input("Enter book name: ")
+    books.append(name)
+    print("Book added successfully!")
+
+def view_books():
+    print("\nAvailable Books:")
+
+    if len(books) == 0:
+        print("No books available")
+    else:
+        for book in books:
+            print("-", book)
+
+def search_book():
+    name = input("Enter book to search: ")
+
+    if name in books:
+        print("Book found!")
+    else:
+        print("Book not found!")
+
+while True:
+    print("\n1. Add Book")
+    print("2. View Books")
+    print("3. Search Book")
+    print("4. Exit")
+
+    choice = input("Enter choice: ")
+
+    if choice == "1":
+        add_book()
+    elif choice == "2":
+        view_books()
+    elif choice == "3":
+        search_book()
+    elif choice == "4":
+        break
+    else:
+        print("Invalid choice")
