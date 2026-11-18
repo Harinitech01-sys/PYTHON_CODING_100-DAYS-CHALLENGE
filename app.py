@@ -311,4 +311,21 @@ while True:
     elif choice == "4":
         break
     else:
-        print("Invalid choice")
+        print("Invalid choice")from sklearn.linear_model import LinearRegression
+
+x = [[1], [2], [3], [4]]
+y = [10, 20, 30, 40]
+
+model = LinearRegression()
+model.fit(x, y)
+
+print(model.predict([[5]]))
+from sklearn.linear_model import LogisticRegression
+
+x = [[1], [2], [3], [4]]
+y = [0, 0, 1, 1]
+
+model = LogisticRegression()
+model.fit(x, y)
+
+print(model.predict([[3]]))
