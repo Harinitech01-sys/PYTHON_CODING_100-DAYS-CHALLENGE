@@ -329,3 +329,33 @@ model = LogisticRegression()
 model.fit(x, y)
 
 print(model.predict([[3]]))
+
+from sklearn.neighbors import KNeighborsClassifier
+
+x = [[1], [2], [3], [4]]
+y = [0, 0, 1, 1]
+
+model = KNeighborsClassifier(n_neighbors=1)
+model.fit(x, y)
+
+print(model.predict([[3]]))
+
+from sklearn.tree import DecisionTreeClassifier
+
+x = [[1], [2], [3], [4]]
+y = [0, 0, 1, 1]
+
+model = DecisionTreeClassifier()
+model.fit(x, y)
+
+print(model.predict([[4]]))
+
+from sklearn.tree import DecisionTreeClassifier
+
+x = [[1], [2], [3], [4]]
+y = [0, 0, 1, 1]
+
+model = DecisionTreeClassifier()
+model.fit(x, y)
+
+print(model.predict([[4]]))
