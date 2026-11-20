@@ -378,4 +378,25 @@ plt.show()
 
 print("ALL 12 VISUALIZATIONS COMPLETED!")
 
- 
+ import matplotlib.pyplot as plt
+
+months = [1, 2, 3, 4, 5]
+
+A = [20, 30, 40, 35, 50]
+B = [15, 25, 35, 45, 55]
+
+plt.plot(months, A, color='blue',
+         marker='o', label='Company A')
+
+plt.plot(months, B, color='red',
+         marker='s', label='Company B')
+
+plt.xlabel("Months")
+plt.ylabel("Sales")
+plt.title("Company Sales Comparison")
+
+plt.legend()
+plt.grid(True)
+
+plt.show()
+
