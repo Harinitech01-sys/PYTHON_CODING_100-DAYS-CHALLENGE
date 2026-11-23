@@ -53,3 +53,22 @@
 #         count=1
 # result+=s[-1]+str(count)
 # print(result)
+
+# s=input()
+# vowels={'a','e','i','o','u'}
+# result=[]
+# for ch in s:
+#     if ch in vowels:
+#         result.append("V")
+#     else:
+#         result.append("C")
+# print(print("".join(result)))
+        
+        
+# s1 = input()
+# s2 = input()
+
+# if len(s1) == len(s2) and s2 in s1 + s1:
+#     print("Rotation")
+# else:
+#     print("Not Rotation")
