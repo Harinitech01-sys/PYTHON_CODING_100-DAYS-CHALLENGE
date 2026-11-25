@@ -358,4 +358,18 @@ y = [0, 0, 1, 1]
 model = DecisionTreeClassifier()
 model.fit(x, y)
 
-print(model.predict([[4]]))
+print(model.predict([[4]]))import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+data = {
+    'Study_Hours': [1, 2, 3, 4, 5],
+    'Attendance': [60, 65, 70, 80, 90],
+    'Marks': [40, 50, 60, 75, 90]
+}
+
+df = pd.DataFrame(data)
+
+sns.pairplot(df)
+plt.show()
+
