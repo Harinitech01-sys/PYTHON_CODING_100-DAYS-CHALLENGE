@@ -373,3 +373,23 @@ df = pd.DataFrame(data)
 sns.pairplot(df)
 plt.show()
 
+import matplotlib.pyplot as plt
+
+# 1. Sample Data
+months = ['Jan', 'Feb', 'Mar', 'Apr', 'May']
+revenue = [12000, 15000, 14000, 18500, 22000]
+
+# 2. Create the Plot
+plt.figure(figsize=(8, 4))
+plt.plot(months, revenue, marker='o', color='#2563eb', linewidth=2, label='Monthly Revenue')
+
+# 3. Customize Labels & Design
+plt.title('Monthly Revenue Growth (2026)', fontsize=14, fontweight='bold')
+plt.xlabel('Month')
+plt.ylabel('Revenue (₹)')
+plt.grid(True, linestyle='--', alpha=0.6)
+plt.legend()
+
+# 4. Display the Chart
+plt.tight_layout()
+plt.show()
