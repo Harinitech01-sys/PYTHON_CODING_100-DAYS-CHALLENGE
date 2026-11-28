@@ -12,22 +12,64 @@ import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 
-# 1. Data Collection and Preprocessing
-X = np.array([[0,0],[0,1],[1,0],[1,1]])
-y = np.array([0,0,0,1])
 
-# 2. Model Selection and Building
-model = Sequential([Dense(4, activation='relu', input_shape=(2,)),
-                    Dense(1, activation='sigmoid')])
+# TEXT ANALYZER PROJECT
 
-# 3. Model Compilation
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+def analyze_text():
 
-# 4. Model Training
-model.fit(X, y, epochs=100, verbose=0)
+    text = input("Enter a sentence: ")
 
-# 5. Model Evaluation
-print("Accuracy:", model.evaluate(X, y, verbose=0)[1])
+    lower_text = text.lower()
 
-# 6. Prediction
-print("Prediction:", model.predict(X, verbose=0).round())
+    freq = {}
+
+    # Character frequency
+    for ch in lower_text:
+        if ch.isalpha():
+            if ch in freq:
+                freq[ch] += 1
+            else:
+                freq[ch] = 1
+
+    print("\n===== TEXT ANALYSIS =====")
+
+    # Total characters
+    print("Total characters:", len(text))
+
+    # Total words
+    words = text.split()
+    print("Total words:", len(words))
+
+    # Vowels and consonants
+    vowels = 0
+    consonants = 0
+
+    for ch in lower_text:
+        if ch.isalpha():
+            if ch in "aeiou":
+                vowels += 1
+            else:
+                consonants += 1
+
+    print("Vowels:", vowels)
+    print("Consonants:", consonants)
+
+    # Duplicate characters
+    print("Duplicate characters: ", end="")
+
+    for ch, count in freq.items():
+        if count > 1:
+            print(ch, end=" ")
+
+    # Character frequency
+    print("\n\nCharacter Frequency:")
+
+    for ch, count in freq.items():
+        print(ch, ":", count)
+
+    # Case conversion
+    print("\nUppercase:", text.upper())
+    print("Lowercase:", text.lower())
+
+
+analyze_text()
