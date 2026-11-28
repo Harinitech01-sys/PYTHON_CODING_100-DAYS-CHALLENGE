@@ -1,20 +1,13 @@
 from transformers import pipeline
 
-# Text Generation
 generator = pipeline("text-generation", model="distilgpt2")
 print(generator("AI is", max_new_tokens=20))
-
-# Text Classification
 classifier = pipeline("sentiment-analysis")
 print(classifier("I love artificial intelligence"))
 
 import numpy as np
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-
-
-# TEXT ANALYZER PROJECT
-
 def analyze_text():
 
     text = input("Enter a sentence: ")
@@ -22,8 +15,6 @@ def analyze_text():
     lower_text = text.lower()
 
     freq = {}
-
-    # Character frequency
     for ch in lower_text:
         if ch.isalpha():
             if ch in freq:
@@ -32,15 +23,9 @@ def analyze_text():
                 freq[ch] = 1
 
     print("\n===== TEXT ANALYSIS =====")
-
-    # Total characters
     print("Total characters:", len(text))
-
-    # Total words
     words = text.split()
     print("Total words:", len(words))
-
-    # Vowels and consonants
     vowels = 0
     consonants = 0
 
@@ -53,15 +38,11 @@ def analyze_text():
 
     print("Vowels:", vowels)
     print("Consonants:", consonants)
-
-    # Duplicate characters
     print("Duplicate characters: ", end="")
 
     for ch, count in freq.items():
         if count > 1:
             print(ch, end=" ")
-
-    # Character frequency
     print("\n\nCharacter Frequency:")
 
     for ch, count in freq.items():
@@ -70,6 +51,4 @@ def analyze_text():
     # Case conversion
     print("\nUppercase:", text.upper())
     print("Lowercase:", text.lower())
-
-
 analyze_text()
